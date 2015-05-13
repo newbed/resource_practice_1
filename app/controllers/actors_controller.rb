@@ -11,10 +11,10 @@ class ActorsController < ApplicationController
   end
 
   def create_row
-    @actor = Actor.new
-    @actor.dob = params[:dob]
-    @actor.name = params[:name]
-    @actor.bio = params[:bio]
+    @actor           = Actor.new
+    @actor.dob       = params[:dob]
+    @actor.name      = params[:name]
+    @actor.bio       = params[:bio]
     @actor.image_url = params[:image_url]
 
     @actor.save
@@ -29,9 +29,9 @@ class ActorsController < ApplicationController
   def update_row
     @actor = Actor.find(params[:id])
 
-    @actor.dob = params[:dob]
-    @actor.name = params[:name]
-    @actor.bio = params[:bio]
+    @actor.dob       = params[:dob]
+    @actor.name      = params[:name]
+    @actor.bio       = params[:bio]
     @actor.image_url = params[:image_url]
 
     @actor.save
